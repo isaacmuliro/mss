@@ -1,0 +1,27 @@
+{
+  "iconDefinitions": {
+    "_file": {
+      "iconPath": "./../icons/file.svg"
+    },
+    "_folder": {
+      "iconPath": "./../icons/folder.svg"
+    },
+    "_folder_open": {
+      "iconPath": "./../icons/folder-open.svg"
+    },
+    "_muro": {
+      "iconPath": "./../icons/muro.svg"
+    }
+  },
+  "file": "_file",
+  "folder": "_folder",
+  "folderExpanded": "_folder_open",
+  "fileExtensions": {
+    "mss": "_muro",
+    "x2s": "_muro"
+  },
+  "languageIds": {
+    "muro": "_muro",
+    "x2s": "_muro"
+  }
+}

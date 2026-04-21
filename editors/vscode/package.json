@@ -1,0 +1,50 @@
+{
+  "name": "muro-vscode-support",
+  "displayName": "Muro Language Support",
+  "description": "Language support and file icons for Muro Style Sheet (.mss).",
+  "version": "0.0.1",
+  "publisher": "xerxisfy",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "activationEvents": [
+    "onLanguage:muro"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "muro",
+        "aliases": [
+          "Muro",
+          "muro",
+          "Muro Style Sheet",
+          "X2S",
+          "x2s"
+        ],
+        "extensions": [
+          ".mss",
+          ".x2s"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "muro",
+        "scopeName": "source.muro",
+        "path": "./syntaxes/muro.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "muro-icons",
+        "label": "Muro Icons",
+        "path": "./themes/muro-icon-theme.json"
+      }
+    ]
+  }
+}

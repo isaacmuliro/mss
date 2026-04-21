@@ -1,0 +1,172 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Muro",
+  "scopeName": "source.muro",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#interpolation"
+    },
+    {
+      "include": "#directives"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#colors"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#properties"
+    },
+    {
+      "include": "#selectors"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.muro",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.line.number-sign.muro",
+          "match": "^\\s*#\\s.*$"
+        },
+        {
+          "name": "comment.block.muro",
+          "begin": "\\*\\*",
+          "end": "\\*\\*"
+        },
+        {
+          "name": "comment.block.css.muro",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.muro",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.muro",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.muro",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.muro",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "interpolation": {
+      "patterns": [
+        {
+          "name": "meta.interpolation.muro",
+          "begin": "#\\{",
+          "end": "\\}",
+          "patterns": [
+            {
+              "include": "#variables"
+            },
+            {
+              "include": "#numbers"
+            }
+          ]
+        }
+      ]
+    },
+    "directives": {
+      "patterns": [
+        {
+          "name": "keyword.control.at-rule.muro",
+          "match": "@[a-zA-Z-]+"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.muro",
+          "match": "\\$[A-Za-z_][\\w-]*"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.muro",
+          "match": "\\b(light|dark|math|mix|lighten|darken|alpha|cw|ch|ci|cb|cmin|cmax)\\s*(?=\\()"
+        }
+      ]
+    },
+    "colors": {
+      "patterns": [
+        {
+          "name": "constant.other.color.rgb-value.muro",
+          "match": "#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.muro",
+          "match": "\\b-?\\d*\\.?\\d+(?:%|px|rem|em|vh|vw|cqw|cqh|ms|s|deg)?\\b"
+        }
+      ]
+    },
+    "properties": {
+      "patterns": [
+        {
+          "name": "support.type.property-name.muro",
+          "match": "\\b[a-zA-Z-]+(?=\\s*:)"
+        }
+      ]
+    },
+    "selectors": {
+      "patterns": [
+        {
+          "name": "entity.other.attribute-name.class.muro",
+          "match": "\\.[A-Za-z_][\\w-]*"
+        },
+        {
+          "name": "entity.other.attribute-name.id.muro",
+          "match": "#[A-Za-z_][\\w-]*"
+        },
+        {
+          "name": "entity.name.tag.muro",
+          "match": "(?<=^|[\\s>+~,(])(?:[A-Za-z][\\w-]*)\\b"
+        },
+        {
+          "name": "keyword.operator.selector.muro",
+          "match": "&"
+        }
+      ]
+    }
+  }
+}

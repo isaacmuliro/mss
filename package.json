@@ -1,0 +1,69 @@
+{
+  "name": "muro-css",
+  "version": "26.0.2",
+  "description": "Muro Style Sheet, a TypeScript CSS preprocessor and bundler for .mss stylesheets.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "muro": "dist/index.js",
+    "x2s": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node dist/tests.js",
+    "muro": "node dist/index.js",
+    "muro:watch": "node dist/index.js app.mss app.css --watch",
+    "x2s": "node dist/index.js",
+    "x2s:watch": "node dist/index.js app.mss app.css --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacmuliro/xerxisfy-elite-style-sheet.git"
+  },
+  "homepage": "https://github.com/isaacmuliro/xerxisfy-elite-style-sheet#readme",
+  "bugs": {
+    "url": "https://github.com/isaacmuliro/xerxisfy-elite-style-sheet/issues"
+  },
+  "keywords": [
+    "muro",
+    "mss",
+    "x2s",
+    "css",
+    "compiler",
+    "preprocessor",
+    "bundler",
+    "sass",
+    "less",
+    "stylus",
+    "postcss",
+    "source-maps",
+    "watch"
+  ],
+  "author": "Isac Muliro",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {}
+}

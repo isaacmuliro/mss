@@ -1,0 +1,193 @@
+{
+  "name": "Muro Style Sheet",
+  "tagline": "Modern, developer-friendly CSS Preprocessor.",
+  "hero": {
+    "logo": "https://xerxisfyappsdata.xerxisfy.com/App-assets/mss/msslogo.png",
+    "title": "Muro Style Sheet — A Next-Generation CSS Preprocessor",
+    "summary": "Muro Style Sheet (MSS) is a monochrome-first TypeScript CSS preprocessor for teams. It compiles a single .mss entry file into one output CSS bundle, providing docs-grade ergonomics, built-in theme baking, utility generation, asset rewriting, and zero-config polyfills.",
+    "features": [
+      "Directory or single-file compilation",
+      "Repeated-rule deduplication & shared utility generation",
+      "Theme baking with light(...) and dark(...) functions",
+      "Muro Guard locks to protect brand-critical declarations",
+      "Container math helpers (cw, ch, ci, cb, cmin, cmax)",
+      "Automatic raster asset rewriting to generated .webp",
+      "Built-in module libraries for reset, grid, and typography",
+      "Watch mode for iterative development loops",
+      "Native purge, minify, and source map capabilities"
+    ],
+    "privacy": [
+      "Muro operates entirely as a local build tool.",
+      "No source code or telemetry data is collected during compilation."
+    ],
+    "dataUsage": [
+      "Muro reads your local .mss files to generate CSS bundles.",
+      "Local raster assets are processed locally to generate .webp formats.",
+      "No data is transmitted over the internet during normal operation."
+    ],
+    "userControlSecurity": [
+      "You have full control over your project assets, build outputs, and configurations.",
+      "Muro Guard ensures brand-critical rules are strictly enforced at compile time."
+    ],
+    "ownershipOperator": "Muro Style Sheet is developed and operated by Xerxisfy LLC. Documentation and registry packages are managed by Xerxisfy LLC."
+  },
+  "description": "Muro builds the CSS layer of a product from one clean .mss entry. It handles variables with nested scope, nesting with selector interpolation, mixins, imports, and context-aware scoped globals. The compiler replaces stacks of distinct CSS tools by providing native utility generation, asset handling, purging, and source maps out of the box.",
+  "category": "Developer Tools & Design",
+  "platforms": [
+    "Node.js",
+    "macOS",
+    "Linux",
+    "Windows",
+    "CLI"
+  ],
+  "version": "26.0.1",
+  "releaseDate": "2026-04-21",
+  "downloads": "10k+",
+  "rating": 5,
+  "screenshots": [
+    "/placeholder.svg?height=600&width=400&text=Muro+Compiler",
+    "/placeholder.svg?height=600&width=400&text=Single+Entry",
+    "/placeholder.svg?height=600&width=400&text=Theme+Baking",
+    "/placeholder.svg?height=600&width=400&text=Muro+Guard"
+  ],
+  "features": {
+    "Language & Syntax Features": [
+      "Variables with nested scope and @context",
+      "Nesting with & selector interpolation",
+      "Built-in modules (@import 'muro:reset', 'muro:grid')",
+      "Theme baking (color: light(#111) dark(#eee))",
+      "Muro Guard (@lock color) for strict design token enforcement",
+      "Rich container expressions and layout shorthands",
+      "Flexible comments (//, #, ** ... **)"
+    ],
+    "Developer Experience": [
+      "One compiler, one output bundle",
+      "muro CLI for build, watch, and purge flows",
+      "External and inline source maps",
+      "VS Code language support (.mss highlighting, comments, brackets)",
+      "Legacy .x2s file and legacy built-in migration support"
+    ],
+    "Performance Optimization": [
+      "Repeated declaration extraction (.muro-u-* utilities)",
+      "Built-in AST minification and unused selector purging",
+      "Automatic raster-to-WebP background conversion",
+      "Dependency-free compilation directly to raw CSS"
+    ]
+  },
+  "usedBy": [
+    "Frontend Developers",
+    "UI/UX Engineers",
+    "Web Agencies",
+    "Design System Teams"
+  ],
+  "reviews": [
+    {
+      "user": "Developer",
+      "company": "Frontend Agency",
+      "rating": 5,
+      "comment": "Muro removed our need for 3 different PostCSS plugins. Having utility extraction, theme baking, and asset conversion in one compiler is incredible."
+    },
+    {
+      "user": "Design Systems Lead",
+      "company": "Tech Startup",
+      "rating": 5,
+      "comment": "Muro Guard is a game changer for adopting brand rules. Being able to lock values ensures our design system stays consistent."
+    }
+  ],
+  "awards": [
+    "Top CSS Preprocessor Architecture 2026"
+  ],
+  "buttons": {
+    "Policy": {
+      "Description": [
+        "https://npm.js.org/package/muro-css"
+      ]
+    },
+    "Quick Start": {
+      "Description": [
+        "Install via npm: npm i -D muro-css",
+        "Add this script to package.json: \"muro\": \"muro src/app.mss public/app.css\"",
+        "Run the compiler: npm run muro"
+      ],
+      "Steps": [
+        "Install muro-css dependency",
+        "Create an app.mss entry file",
+        "Setup npm scripts",
+        "Compile and link app.css"
+      ]
+    },
+    "CLI Reference": {
+      "Description": [
+        "Compile a file: muro app.mss app.css",
+        "Watch directory: muro ./styles ./public/app.css --watch",
+        "Purge unused rules: muro app.mss app.css --purge \"./src\"",
+        "Generate sourcemaps: muro app.mss app.css --sourcemap"
+      ],
+      "Resources": [
+        "Run `muro --help` for full CLI documentation"
+      ]
+    },
+    "Programmatic API": {
+      "Description": [
+        "import { compileEntry, compileString } from 'muro-css';",
+        "compileEntry('./src/app.mss', { watch: false });",
+        "compileString('.btn { color: #fff; }', 'virtual.mss', options);"
+      ],
+      "Steps": [
+        "Import from muro-css toolkit",
+        "Pass options object to map CLI functionality",
+        "Catch compilation warnings and errors natively"
+      ]
+    },
+    "Example": {
+      "Description": [
+        "Write expressive code that translates identically to CSS without extra tooling:",
+        ".button {",
+        "  @include card;",
+        "  layer: modal;",
+        "  color: light(#111111) dark(#f5f5f5);",
+        "",
+        "  &:hover {",
+        "    color: $brand;",
+        "  }",
+        "}"
+      ]
+    },
+    "Contact": {
+      "Description": [
+        "Reach out on Github for bugs, feature requests, and workflow questions."
+      ],
+      "Contact": [
+        "https://github.com/isaacmuliro/mss"
+      ]
+    }
+  },
+  "releaseNotes": {
+    "26.0.1": [
+      "Stable public release of the Muro compiler.",
+      "Finalized CLI functionality and brand package alignment (muro-css).",
+      "Shared utility generation enabled by default.",
+      "Theme baking, Guard, and built-in modules formalized."
+    ]
+  },
+  "support": {
+    "contact": "https://github.com/isaacmuliro/mss/issues",
+    "status": "Active",
+    "documentation": "Review README.md and the docs included in the repository.",
+    "troubleshooting": "See the troubleshooting section inside the project documentation."
+  },
+  "technicalSpecs": {
+    "Core": [
+      "Written in TypeScript",
+      "Abstract Syntax Tree (AST) tokenization pipeline",
+      "Stand-alone node runtime execution via CLI"
+    ],
+    "Bindings": [
+      "Exposes compileEntry and compileString TypeScript type declarations"
+    ],
+    "Cross-Platform": [
+      "Node 18+",
+      "Linux, macOS, Windows compatible"
+    ]
+  }
+}
